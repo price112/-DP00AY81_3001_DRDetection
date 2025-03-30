@@ -1,9 +1,10 @@
 # -DP00AY81_3001_DRDetection
 This is for the coursework of DP00AY81-3001 Advancing AI-Driven Oculomics for Eye and Systemic Diseases
 
-Please download/prepare the pretrained weights first and then run the slurm script provided.
-
-Commands like: 
+Please 
+1. prepare the APTOS 2019 dataset according to the structure in https://github.com/rmaphoh/RETFound_MAE
+2.download/prepare the pretrained weights for the encoders (e.g., ConvNeXtV2, DinoV2, RETFound)
+3.Then run the slurm script (*.txt files) provided. Commands like: 
 
 ```
 torchrun --nproc_per_node=1 main_finetune.py \
@@ -29,4 +30,4 @@ wait
 
 Please check the log files for all the experiments here: https://unioulu-my.sharepoint.com/:f:/g/personal/hayu23_univ_yo_oulu_fi/EgWdVcxGC6VDvTjOR25Vv4UBURR-DfQscjxeQZU0x2LlSg?e=8ltAgf
 
-Please download all the trained weights/testing records in the APTOS2019 dataset here:
+Please download all the trained weights/testing records in the APTOS2019 dataset here:https://unioulu-my.sharepoint.com/:f:/g/personal/hayu23_univ_yo_oulu_fi/Ev7h8_W7-G1Ig0zEMTwEwfkBe7BQv8jREDdj0kRMpPMymw?e=lmXHvw
