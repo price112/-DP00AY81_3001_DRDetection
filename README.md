@@ -3,7 +3,9 @@ This is for the coursework of DP00AY81-3001 Advancing AI-Driven Oculomics for Ey
 
 Please 
 1. prepare the APTOS 2019 dataset according to the structure in https://github.com/rmaphoh/RETFound_MAE
+
 2.download/prepare the pretrained weights for the encoders (e.g., ConvNeXtV2, DinoV2, RETFound)
+
 3.Then run the slurm script (*.txt files) provided. Commands like: 
 
 ```
