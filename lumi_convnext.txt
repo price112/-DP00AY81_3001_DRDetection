@@ -1,0 +1,45 @@
+#!/bin/bash
+#SBATCH --job-name=srgb
+#SBATCH --account=project_462000742
+#SBATCH --nodes=1
+#SBATCH --ntasks-per-node=1
+#SBATCH --gpus-per-node=1
+#SBATCH --cpus-per-task=48
+#SBATCH --mem=480G
+#SBATCH --partition=small-g
+#SBATCH --time=24:00:00
+
+module load LUMI/24.03 partition/G rocm/6.2.2
+
+rocm-smi
+rocm-smi --showmeminfo vram
+free -g
+
+export PATH="/users/yuhao111/pytorch/bin:$PATH"
+export MIOPEN_DISABLE_CACHE=1
+export MIOPEN_DISABLE_SYSDB=1
+export MIOPEN_USER_DB_PATH=/tmp/miopen_cache_${RANK}
+export TORCH_DISTRIBUTED_DEBUG=INFO
+
+cd /flash/project_462000742/eye_coursework/RETFound_MAE-main/
+
+torchrun --nproc_per_node=1 main_finetune.py \
+    --model ConvNeXtV2_large \
+    --cls_task 2 \
+    --nb_classes 2 \
+    --savemodel \
+    --global_pool \
+    --batch_size 32 \
+    --world_size 1 \
+    --epochs 100 \
+    --warmup_epochs 5 \
+    --lr 0.0002 \
+    --lrd_total 0.1 \
+    --layer_decay 1 \
+    --weight_decay 0.05 --drop_path 0.2 \
+    --data_path APTOS2019 \
+    --input_size 224 \
+    --task ConvNeXtV2_large_224_2_class_TVERSKY \
+    --finetune None \
+    --loss_func TVERSKY
+wait
