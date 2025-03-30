@@ -25,3 +25,7 @@ torchrun --nproc_per_node=1 main_finetune.py \
     --finetune None \
     --loss_func TVERSKY
 wait
+
+Please check the log files for all the experiments here: https://unioulu-my.sharepoint.com/:f:/g/personal/hayu23_univ_yo_oulu_fi/EgWdVcxGC6VDvTjOR25Vv4UBURR-DfQscjxeQZU0x2LlSg?e=8ltAgf
+
+Please download all the trained weights/testing records in the APTOS2019 dataset here:
