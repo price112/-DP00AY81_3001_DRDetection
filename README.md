@@ -33,4 +33,4 @@ wait
 
 Please check the log files for all the experiments here: https://unioulu-my.sharepoint.com/:f:/g/personal/hayu23_univ_yo_oulu_fi/EgWdVcxGC6VDvTjOR25Vv4UBURR-DfQscjxeQZU0x2LlSg?e=8ltAgf
 
-Please download all the trained weights/testing records in the APTOS2019 dataset here:https://unioulu-my.sharepoint.com/:f:/g/personal/hayu23_univ_yo_oulu_fi/Ev7h8_W7-G1Ig0zEMTwEwfkBe7BQv8jREDdj0kRMpPMymw?e=lmXHvw
+Please download all the trained weights/testing records in the APTOS2019 dataset here:https://unioulu-my.sharepoint.com/:u:/g/personal/hayu23_univ_yo_oulu_fi/EVqZc9DU1eZGrt_e6zqeY-gBma2Vz1JrclTD6moQO6O7AA?e=demncO
